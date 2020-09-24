@@ -10,3 +10,21 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buttons {
+    padding-top: 10px;
+    width: 50%;
+}
+
+.gameButton {
+    width: 32%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
