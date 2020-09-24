@@ -1,4 +1,6 @@
-const body = document.querySelector('body');
+const body = document.querySelector('body')
+const nameField = document.querySelector('#nameField')
+const changeNameBtn = document.querySelector('#changeNameBtn')
 
 class Tomagotchi {
     constructor (age=0, hunger=1,sleepiness=1,boredom=1, name='') {
@@ -36,16 +38,22 @@ class Tomagotchi {
 const obj = new Tomagotchi();
 
 const displayMetrics = (obj) => {
-    const metrics = Object.keys(obj);
+    const metrics = Object.keys(obj)
     for (metric of metrics) {
         //Makes the first letter of the key of Tomagatchi upper case
         const upperCasemetric = metric.charAt(0).toUpperCase() + metric.slice(1,metric.length)
         //Logs all keys and values of Tomagotchi
-        console.log(`${upperCasemetric}: ${obj[metric]}`);
+        console.log(`${upperCasemetric}: ${obj[metric]}`)
     }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    displayMetrics(obj);
+    displayMetrics(obj)
+
+    changeNameBtn.addEventListener('click', () => {
+        obj.setName(nameField.value);
+    })
+    console.log(nameField)
+
 
 })

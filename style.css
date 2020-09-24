@@ -1,7 +1,14 @@
 body {
     background-color: rgb(77, 104, 110);
     width: 100%;
-} 
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
 
 img {
     width: 250px;
@@ -17,8 +24,13 @@ img {
     margin-right: auto;
 }
 
-#buttons {
-    padding-top: 10px;
+.name {
+    display: inline-block;
+    width: 45%;
+}
+
+#buttons, #nameElement {
+    padding-top: 15px;
     width: 50%;
 }
 
