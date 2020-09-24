@@ -7,10 +7,17 @@ class Tomagotchi {
         this.sleepiness = sleepiness
         this.boredom = boredom
     }
+
 }
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const obj = new Tomagotchi(10);
-    console.log(body);
+    const metrics = Object.keys(obj);
+    for (metric of metrics) {
+        //Makes the first letter of the key of Tomagatchi upper case
+        const upperCasemetric = metric.charAt(0).toUpperCase() + metric.slice(1,metric.length)
+        //Logs all keys and values of Tomagotchi
+        console.log(`${upperCasemetric}: ${obj[metric]}`);
+    }
 })
