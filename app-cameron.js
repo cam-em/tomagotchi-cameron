@@ -1,11 +1,12 @@
 const body = document.querySelector('body');
 
 class Tomagotchi {
-    constructor (age, hunger=1,sleepiness=1,boredom=1) {
+    constructor (age=0, hunger=1,sleepiness=1,boredom=1, name='') {
         this.age = age
         this.hunger = hunger
         this.sleepiness = sleepiness
         this.boredom = boredom
+        this.name = name;
     }
 
     feed() {
@@ -26,9 +27,13 @@ class Tomagotchi {
         console.log(`Boredom: ${this.boredom}`)
     }
 
+    setName(name) {
+        this.name = name
+        console.log(`You set your Tomagotchi's name to ${name}`)
+    }
 }
 
-const obj = new Tomagotchi(10);
+const obj = new Tomagotchi();
 
 const displayMetrics = (obj) => {
     const metrics = Object.keys(obj);
